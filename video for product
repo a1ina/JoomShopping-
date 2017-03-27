@@ -1,0 +1,8 @@
+<?php if (count($this->videos)){?>
+<?php foreach($this->videos as $k=>$video){?>
+<?php if ($video->video_code) { ?>
+<embed width="320" height="240" style="display:block" src="<?php print $this->video_image_preview_path."/"; if ($video->video_preview) print $video->video_preview; else print 'video.gif'?>" pluginspage="http://www.apple.com/quicktime/download/" bgcolor="#ffffff" autoplay="false">
+<?php } else { ?>
+<embed width="320" height="240" style="display:block" src="<?php print $this->video_product_path?>/<?php print $video->video_name?>" pluginspage="http://www.apple.com/quicktime/download/" bgcolor="#ffffff" autoplay="false">
+<?php } ?><?php } ?>
+<?php }?><?php print $this->_tmp_product_html_after_video;?>  
