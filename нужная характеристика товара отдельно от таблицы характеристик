@@ -1,0 +1,12 @@
+<?php if (is_array($this->product->extra_field)) { ?>
+<?php foreach ($this->product->extra_field as $extra_field) { ?>
+<?php $extra_field_id = JRequest::getVar('extra_field_id', null); ?>
+<?php
+switch ($extra_field['name']) {
+    case Гарантия: ?>
+	<span><?php print $extra_field['name']; ?>: <?php print $extra_field['value']; ?></span>
+	<?php break;
+}
+?>
+<?php } ?><?php } ?>
+
