@@ -45,6 +45,8 @@ print $this->_tmp_maincategory_html_start;
                             <?php print $category->name?>
                         </a>
                     </div>
+                     /***************************************************************************/
+                    //вывод дочерних категорий
                          <div class="sub-category">
              <?php $Sub_Categories = $Table_Category->getSubCategories($category->category_id); ForEach($Sub_Categories As $Sub_Category){Print "<div><A Href = \"".$Sub_Category->category_link."\">".$Sub_Category->name."</A></div>";}?>
            </div>
@@ -53,7 +55,7 @@ print $this->_tmp_maincategory_html_start;
                     </p>
                 </div>
             </div>
-      
+      /***************************************************************************/
            <?php if ($k % $this->count_category_to_row == $this->count_category_to_row - 1) : ?>
 
                 </div>
