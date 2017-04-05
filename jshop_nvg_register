@@ -1,0 +1,25 @@
+<script>
+	let a = tr_shipping_3.nextSibling.nextSibling,b;
+	a.style.display = 'none';
+	city.addEventListener('focus',function(){
+		b = setInterval(function(){
+			city.value = city.value.trim();
+			switch(city.value)
+			{
+				case 'Одесса': a.style.display = 'block';break;
+				case 'Одеса': a.style.display = 'block';break;
+				case 'одесса': a.style.display = 'block';break;
+				case 'одеса': a.style.display = 'block';break;
+				case 'Odessa': a.style.display = 'block';break;
+				case 'Odesa': a.style.display = 'block';break;
+				case 'odesa': a.style.display = 'block';break;
+				case 'odessa': a.style.display = 'block';break;
+				default: a.style.display = 'none';break;
+			}
+		},150)
+		
+	});
+	city.addEventListener('blur',function(){
+		 clearInterval(b);
+	});
+</script>
