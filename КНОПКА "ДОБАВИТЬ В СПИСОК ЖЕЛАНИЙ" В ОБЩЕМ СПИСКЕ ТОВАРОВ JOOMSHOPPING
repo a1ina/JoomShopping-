@@ -1,0 +1,4 @@
+<?php
+$wish = JRoute::_('index.php?option=com_jshopping&controller=cart&task=add&to=wishlist&category_id=' .$product->category_id. '&product_id=' .$product->product_id. '');
+?>
+<a href="/main/<?php print $wish?>"><?php print _JSHOP_ADD_TO_WISHLIST?></a>
