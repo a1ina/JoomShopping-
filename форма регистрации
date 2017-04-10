@@ -1,0 +1,5 @@
+\components\com_users\models\forms\registration.xml (ФОРМА)
+\libraries\joomla\user\user.php (ПЕРЕМЕННЫЕ В БД) #__users
+\templates\platoshka\html\com_users\registration\default.php (ШАБЛОН ФОРМЫ)
+\components\com_users\models\registration.php (ОБРАБОТЧИК) (~387)
+\components\com_users\controllers\user.php (ВХОД ПО EMAIL ИЛИ НОМ. ТЕЛ) (113-158)
