@@ -1,0 +1,3 @@
+<?php if ($video->video_code){ ?>
+     <iframe frameborder="0" height="349" src="http://www.youtube.com/embed/<?php echo $video->video_code?>" width="425"></iframe>  
+<?php } ?>
