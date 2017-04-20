@@ -1,3 +1,29 @@
 <?php if ($video->video_code){ ?>
      <iframe frameborder="0" height="349" src="http://www.youtube.com/embed/<?php echo $video->video_code?>" width="425"></iframe>  
 <?php } ?>
+
+
+
+
+
+
+<div id="video-gallery" class="royalSlider videoGallery rsDefault">
+              <?php if (count($this->videos)){?>
+                    <?php foreach($this->videos as $k=>$video){?>
+                        <?php if ($video->video_code) { ?>
+                            <a data-rsw="843" data-rsh="473" href="" id="video_<?php print $k?>" onclick="showVideoCode(this.id);return false;" data-rsvideo="<?php print $this->video_product_path?>/<?php print $video->video_name?>">
+                            <iframe frameborder="0" height="600" src="http://www.youtube.com/embed/<?php echo $video->video_code?>" width="850"></iframe> 
+    <div class="rsTmb">
+<!--          <iframe frameborder="0" height="165" src="http://www.youtube.com/embed/<?php// echo $video->video_code?>" width="250"></iframe> -->
+   <img class="jshop_video_thumb" src="<?php print $this->video_image_preview_path."/"; if ($video->video_preview) print $video->video_preview; else print 'video.gif'?>" alt="video" />
+    </div>
+                       </a>
+                        <?php } else { ?>
+                            <a href="<?php print $this->video_product_path?>/<?php print $video->video_name?>" id="video_<?php print $k?>" onclick="showVideo(this.id, '<?php print $this->config->video_product_width;?>', '<?php print $this->config->video_product_height;?>'); return false;"><img class="jshop_video_thumb" src="<?php print $this->video_image_preview_path."/"; if ($video->video_preview) print $video->video_preview; else print 'video.gif'?>" alt="video" /></a>
+                        <?php } ?>
+                    <?php } ?>
+                <?php }?>
+                      
+            <?php print $this->_tmp_product_html_after_video;?>  
+                       
+              </div>
